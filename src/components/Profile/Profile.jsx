@@ -1,18 +1,17 @@
-import React from 'react';
-import MyPosts from './MyPosts/MyPosts';
-import Post from './MyPosts/Post/Post';
-import s from './Profile.module.css';
+import React from "react";
+import MyPosts from "./MyPosts/MyPosts";
+
+import s from "./Profile.module.css";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+
 
 const Profile = () => {
-    return      <div>
-        <div>
-        <img src='https://www.swift.com/sites/default/files/styles/overview_thumbnail_400x225_/public/images/swift-image-lighttrails-car5-1440x600.jpg?itok=axX8aYsj'></img>
-        </div>
-        <div>
-            ava + description
-        </div>
-        <MyPosts />
+  return (
+    <div>
+      <ProfileInfo />
+      <MyPosts />
     </div>
- }
+  );
+};
 
- export default Profile;
+export default Profile;
