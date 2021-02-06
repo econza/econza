@@ -4,7 +4,7 @@ import s from "./Header.module.css";
 const Header = () => {
   return (
     <header className={s.header}>
-      <img src="https://placeit-assets1.s3-accelerate.amazonaws.com/custom-pages/make-a-gaming-logo/gaming-logo-maker-for-an-rpg-guild.png"></img>
+      <img src="https://www.webdesignerdepot.com/cdn-origin/uploads6/minimalist_logos/nocturnal.jpg"></img>
     </header>
   );
 };

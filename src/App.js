@@ -21,8 +21,8 @@ const App = (props) => {
           <Route component={Music} path="/music"/>
           <Route component={Settings} path="/settings" />
 
-          <Route render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages}/> } path="/dialogs" />
-          <Route render={ () => <Profile posts={props.posts}/> } path="/profile"/>
+          <Route render={ () => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages}/> } path="/dialogs" />
+          <Route render={ () => <Profile posts={props.state.profilePage.posts}/> } path="/profile"/>
         </div>
       </div>
     </BrowserRouter>
