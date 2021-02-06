@@ -5,7 +5,7 @@ const ProfileInfo = () => {
   return (
     <div>
       <div>
-        <img src="https://www.swift.com/sites/default/files/styles/overview_thumbnail_400x225_/public/images/swift-image-lighttrails-car5-1440x600.jpg?itok=axX8aYsj"></img>
+        <img className={s.profileImg} src="https://www.artmajeur.com/medias/standard/o/n/onur-yumlu/artwork/11642858_goelcuek-yansima-fx.jpg"></img>
       </div>
       <div className={s.descriptionBlock}>ava + description</div>
     </div>

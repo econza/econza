@@ -8,11 +8,13 @@
 }
 
 .dialogsItems .active {
-    color:gold;
+  color: gold;
 }
 
-/* .dialog {
-} */
+.dialogs img {
+  border-radius: 30%;
+  width: 30px;
+}
 
 .messages {
   padding: 10px;
