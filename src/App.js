@@ -22,7 +22,7 @@ const App = (props) => {
           <Route component={Settings} path="/settings" />
 
           <Route render={ () => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages}/> } path="/dialogs" />
-          <Route render={ () => <Profile posts={props.state.profilePage.posts}/> } path="/profile"/>
+          <Route render={ () => <Profile posts={props.state.profilePage.posts} addPost={props.addPost} /> } path="/profile"/>
         </div>
       </div>
     </BrowserRouter>
