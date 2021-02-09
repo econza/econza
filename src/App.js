@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+// import React, { Profiler } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
@@ -21,8 +21,16 @@ const App = (props) => {
           <Route component={Music} path="/music"/>
           <Route component={Settings} path="/settings" />
 
-          <Route render={ () => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages}/> } path="/dialogs" />
-          <Route render={ () => <Profile posts={props.state.profilePage.posts} addPost={props.addPost} /> } path="/profile"/>
+          <Route render={ () => <Dialogs 
+          dialogs={props.state.dialogsPage.dialogs} 
+          messages={props.state.dialogsPage.messages}/> } 
+          path="/dialogs" />
+          <Route render={ () => <Profile 
+          profilePage={props.state.profilePage} 
+          addPost={props.addPost} /> } 
+          newPostText={props.state.newPostText}
+          updateNewPostText={props.updateNewPostText}
+          path="/profile"/>
         </div>
       </div>
     </BrowserRouter>
