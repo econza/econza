@@ -1,4 +1,6 @@
-import { renderEntireTree } from "../render";
+let renderEntireTree = () => {
+  console.log("state chenged");
+};
 
 let state = {
   sidebarPage: {
@@ -38,7 +40,7 @@ let state = {
   },
 };
 
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     id: 5,
     message: state.profilePage.newPostText,
@@ -50,9 +52,13 @@ export let addPost = () => {
   renderEntireTree(state);
 };
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
   renderEntireTree(state);
+};
+
+export const subscribe = (odserver) => {
+  renderEntireTree = odserver;
 };
 
 export default state;
