@@ -1,8 +1,5 @@
-let renderEntireTree = () => {
-  console.log("state chenged");
-};
-
-let state = {
+let store ={
+ _state: {
   sidebarPage: {
     friends: [
       { id: "1", name: "Stefon" },
@@ -38,27 +35,35 @@ let state = {
       { id: "5", message: "Baby dont hurt me" },
     ],
   },
-};
-
-export const addPost = () => {
+},
+getState() {
+  return this._state;
+},
+callSubscriber() {
+  console.log("state chenged");
+},
+addPost()  {
   let newPost = {
     id: 5,
-    message: state.profilePage.newPostText,
+    message: this._state.profilePage.newPostText,
     likesCount: 0,
   };
 
-  state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = " ";
-  renderEntireTree(state);
+  this._state.profilePage.posts.push(newPost);
+  this._state.profilePage.newPostText = " ";
+  this._callSubscriber(this._state);
+},
+updateNewPostText(newText) {
+  this._state.profilePage.newPostText = newText;
+  this._callSubscriber(this._state);
+},
+subscribe(odserver) {
+  this._callSubscriber = odserver;
+},
+
 };
 
-export const updateNewPostText = (newText) => {
-  state.profilePage.newPostText = newText;
-  renderEntireTree(state);
-};
 
-export const subscribe = (odserver) => {
-  renderEntireTree = odserver;
-};
 
-export default state;
+export default store;
+window.store = store;
