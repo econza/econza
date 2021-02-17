@@ -22,15 +22,13 @@ const App = (props) => {
 
           <Route
             render={() => (
-              <DialogsContainer store={props.store} />
+              <DialogsContainer />
             )}
             path="/dialogs"
           />
           <Route
             render={() => (
-              <Profile
-                store={props.store}
-              />
+              <Profile />
             )}
             path="/profile"
           />
