@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 
 
 
-let renderEntireTree = (state) => {
+
   ReactDOM.render(
     <React.StrictMode>
       <Provider store={store}>
@@ -16,11 +16,5 @@ let renderEntireTree = (state) => {
     </React.StrictMode>,
     document.getElementById("root")
   );
-};
 
-renderEntireTree(store.getState());
 
-store.subscribe(() => {
-  let state = store.getState();
-  renderEntireTree(state)
-});
