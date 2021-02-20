@@ -1,7 +1,13 @@
 .nav {
   grid-area: n;
   /* background-color: rgb(49, 189, 165); */
-  background: linear-gradient(to bottom, #81ff76, #ffffff);
+  /* background: linear-gradient(from left to bottom, #999999, #ffffff); */
+  background: rgb(150, 150, 150);
+  background: linear-gradient(
+    176deg,
+    rgba(150, 150, 150, 0.3603816526610645) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
   padding: 20px;
 }
 
@@ -11,5 +17,5 @@
 }
 
 .item a.activeLink {
-  color:gold;
+  color: rgb(134, 2, 146);
 }

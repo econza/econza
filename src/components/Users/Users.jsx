@@ -15,7 +15,7 @@ props.setUsers ([
       },
       {
         id: "2",
-        photoUrl: 'https://lh3.googleusercontent.com/proxy/RLf6q57CwczZBlB285hBGHsq9saGLBMwLIQTZd1HPGpKrT0cd8WKeywXQl6AOEUekbieXrRjMX9YcMgMPbAntkrlQFdJIvAv8w-IABom0l9NbbFNU5U1glGB8Lvtg36hNW_egR6et6Fwn6W22dVVSKs',
+        photoUrl: 'https://cdn.shopify.com/s/files/1/0023/0565/4882/products/6_1_1ed9c532-225b-49d5-a23f-fb7d6ee8fce7_1200x.jpg?v=1571698172',
         followed: true,
         fullName: "Yana",
         status: "Whats up?",

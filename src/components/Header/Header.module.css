@@ -1,7 +1,14 @@
 .header {
   grid-area: h;
   /* background-color: rgb(101, 209, 91); */
-  background: linear-gradient(to right, #81ff76 10%, #ffffff);;
+  /* background: linear-gradient(to right, #81ff76 10%, #ffffff);; */
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0.8533788515406162) 0%,
+    rgba(253, 29, 29, 0.6629026610644257) 50%,
+    rgba(252, 176, 69, 0.7805497198879552) 100%
+  );
 }
 
 .header img {
