@@ -1,36 +1,17 @@
 
 const SET_USERS = "SET_USERS"
 
-let FOLLOW = "FOLLOW";
-let UNFOLLOW = "UNFOLLOW";
+const FOLLOW = "FOLLOW";
+const UNFOLLOW = "UNFOLLOW";
+const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+const SET_TOTAL_USERS_COUNT = "SET_TOTAL_USERS_COUNT";
+
 
 let initialState = {
-  users: [
-    // {
-    //   id: "1",
-    //   photoUrl: 'https://www.meme-arsenal.com/memes/a538041abe14be401629711790bdd84d.jpg',
-    //   followed: false,
-    //   fullName: "Stefon",
-    //   status: "i am a lover",
-    //   location: { city: "Rostov-on-Don", country: "Russia" },
-    // },
-    // {
-    //   id: "2",
-    //   photoUrl: 'https://lh3.googleusercontent.com/proxy/RLf6q57CwczZBlB285hBGHsq9saGLBMwLIQTZd1HPGpKrT0cd8WKeywXQl6AOEUekbieXrRjMX9YcMgMPbAntkrlQFdJIvAv8w-IABom0l9NbbFNU5U1glGB8Lvtg36hNW_egR6et6Fwn6W22dVVSKs',
-    //   followed: true,
-    //   fullName: "Yana",
-    //   status: "Whats up?",
-    //   location: { city: "Gomel", country: "Belarus" },
-    // },
-    // {
-    //   id: "3",
-    //   photoUrl: 'https://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkzFB3khwQLJh-v57INgQs76aKTM5SRkZCeTgDn6uOyic&fn=sqr_288',
-    //   followed: true,
-    //   fullName: "Marina",
-    //   status: "VIP",
-    //   location: { city: "Moscow", country: "Russia" },
-    // },
-  ],
+  users: [ ],
+  pageSize: 5,
+  totalUsersCount: 0,
+  currentPage: 2,
 
   newPostText: "Stefon dot com ",
 };
@@ -58,7 +39,13 @@ const usersReducer = (state = initialState, action) => {
         }),
       };
     case SET_USERS: {
-      return {...state, users: [...state.users, ...action.users]}
+      return {...state, users: action.users}
+    }
+    case SET_CURRENT_PAGE: {
+      return {...state, currentPage: action.currentPage}
+    }
+    case SET_TOTAL_USERS_COUNT: {
+      return {...state, totalUsersCount: action.count}
     }
     default:
       return state;
@@ -85,5 +72,23 @@ export const setUsersAC = (users) => {
     users,
   };
 };
+
+export const setCurrentPageAC = (currentPage) => {
+  return {
+    type: SET_CURRENT_PAGE,
+    currentPage,
+  };
+};
+
+export const setTotalUsersCountAC = (totalUsersCount) => {
+  return {
+    type: SET_TOTAL_USERS_COUNT,
+    count: totalUsersCount,
+  };
+};
+
+
+
+
 
 export default usersReducer;
