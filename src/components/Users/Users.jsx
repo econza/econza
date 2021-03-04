@@ -43,7 +43,7 @@ let Users = (props) => {
                 onClick={() => {
 
                   axios
-                  .delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {withCredentials: true, headers:{ "API-KEY": "0e3604f2-c892-4b9d-aa26-f3a27635183b"} })
+                  .delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {withCredentials: true, headers:{ "API-KEY": "e94e1752-e831-4d1b-86da-2fad5b456567"} })
                   .then (response => {
                      if(response.data.resultCode == 0)
                     props.unfollow(u.id);
@@ -57,7 +57,7 @@ let Users = (props) => {
                 onClick={() => {
 
                   axios
-                  .delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {withCredentials: true, headers:{ "API-KEY": "0e3604f2-c892-4b9d-aa26-f3a27635183b"}})
+                  .delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {withCredentials: true, headers:{ "API-KEY": "e94e1752-e831-4d1b-86da-2fad5b456567"}})
                   .then (response => {
                      if(response.data.resultCode == 0)
                     props.follow(u.id);
