@@ -134,9 +134,9 @@ export const follow = (userId) => {
     usersAPI.follow(userId)
     .then (response => {
        if(response.data.resultCode == 0)
-      dispacth(followSuccess(userId));
+       dispatch(followSuccess(userId));
     });
-    dispatch(toggleFollowingProgress(false, u.id));
+    dispatch(toggleFollowingProgress(false, userId));
      }
  }
 
@@ -146,9 +146,9 @@ export const follow = (userId) => {
     usersAPI.unfollow(userId)
     .then (response => {
        if(response.data.resultCode == 0)
-      dispacth(unfollowSuccess(userId));
+       dispatch(unfollowSuccess(userId));
     });
-    dispatch(toggleFollowingProgress(false, u.id));
+    dispatch(toggleFollowingProgress(false, userId));
      }
  }
 
