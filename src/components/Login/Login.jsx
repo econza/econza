@@ -45,7 +45,7 @@ const Login = (props) => {
   };
 
   if (props.isAuth) {
-    return <Redirect to={"/profile"} />;
+    return <Redirect to={`/profile/${props.id}`} />;
   }
 
   return (
@@ -57,7 +57,8 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
+  id: state.auth.id
 });
 
 export default connect(mapStateToProps, { login })(Login);
