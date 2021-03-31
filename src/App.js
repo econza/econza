@@ -1,4 +1,4 @@
-// import React, { Profiler } from "react";
+import React, { Profiler } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
