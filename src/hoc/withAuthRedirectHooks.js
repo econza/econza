@@ -6,4 +6,4 @@ export const useAuthRedirect = () => {
 const isAuth = useSelector((state) => state.auth.isAuth)
 
 useEffect(() => {
-  if (!isAuth) return <Redirect to={"/login"} />}, [isAuth]);
+  if (!isAuth) return <Redirect to={"/login"} />}, [isAuth])};
